@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TPO Made Easy!</title>
+  </head>
+  <body>
+<form class="" action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+<input type="file" name="studentIds" value="studentIds">
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="fathersName" id="fathersName">
+    <label for="fathersName">Fathers Name</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="mothersName" id="mothersName">
+    <label for="mothersName">Mothers Name</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="email" id="email">
+    <label for="email">Email</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="aadhar" id="aadhar">
+    <label for="aadhar">Aadhar Number</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="PAN" id="PAN">
+    <label for="PAN">Pan Number</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="passport" id="passport">
+    <label for="passport">Passport Number</label>
+  </div>
+
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="mobileNumber" id="mobileNumber">
+    <label for="mobileNumber">Mobile Number</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="permanantAddress" id="permanantAddress">
+    <label for="permanantAddress">Permanant Address</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="tenthCGPA" id="tenthCGPA">
+    <label for="tenthCGPA">Marks</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="numberOfBacklogs" id="numberOfBacklogs">
+    <label for="numberOfBacklogs">Number Of Backlogs</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="activeBacklog" id="activeBacklog">
+    <label for="activeBacklog">Active Backlog</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="PassiveBacklog" id="PassiveBacklog">
+    <label for="PassiveBacklog">Passive Backlog</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="YDYears" id="YDYears">
+    <label for="YDYears">YD Years</label>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" name="inputFields" value="currentBatch" id="currentBatch">
+    <label for="currentBatch">Current Batch</label>
+  </div>
+<input type="text" name="email" value="Enter Email for details">
+<br>
+<button type="submit" name="submit">Get Student Details</button>
+</form>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<body>
+  <form class = "updateform" action='update_profile/' method= "POST">
+    {% csrf_token %}
+    <p class="updateform">Personal Details:</p>
+
+    <div style="float:left;margin-right:30px;">
+    <p class = "updateform"><label for="rollNumber">Roll Number :</label>
+		<input type="number" id="rollNumber" name="rollNumber"><br>
+    <label for="isPAN">Do you have a PAN card?</label>
+    <input type="radio" id="isPAN" name="isPAN" value="1"><small>Yes</small>
+    <input type="radio" id="isPAN" name="isPAN" value="0"><small>No</small><br>
+    <label for="PAN">Personal Account Number (PAN) :</label>
+    <input type="text" id="PAN" name="PAN"><br>
+    <label for="Gender">Gender :</label>
+    <input type="radio" id="Gender" name="Gender" value="M"><small>Male</small>
+    <input type="radio" id="Gender" name="Gender" value="F"><small>Female</small><br>
+    <label for="fathersName">Father's Name :</label>
+		<input type="text" id="fathersName" name="fathersName"><br>
+    <label for="permanantAddress">Permanant Address :</label>
+		<input type="text" id="permanantAddress" name="permanantAddress"><br>
+    </p></div>
+
+    <div style="float:left;">
+      <p class="updateform2">
+    <label for="aadhar">Aadhar Number :</label>
+		<input type="text" id="aadhar" name="aadhar"><br>
+    <label for="isPassport">Do you have a Passport?</label>
+    <input type="radio" id="isPassport" name="isPassport" value="1"><small>Yes</small>
+    <input type="radio" id="isPassport" name="isPassport" value="0"><small>No</small><br>
+    <label for="passport">Passport Number :</label>
+    <input type="text" id="passport" name="passport"><br>
+    <label for="nationality">Nationality :</label>
+    <input type="text" id="nationality" name="nationality"><br>
+    <label for="mothersName">Mother's Name :</label>
+    <input type="text" id="mothersName" name="mothersName"><br>
+    <label for="residentialAddress">Current Address :</label>
+    <input type="text" id="residentialAddress" name="residentialAddress"><br>
+
+    </p></div>
+
+<p class="updateform">Academic Details:</p>
+
+    <div style="float:left;margin-right:30px;">
+
+    <p class="updateform"><label for="tenthCGPA">10th CGPA :</label>
+    <input type="text" id="tenthCGPA" name="tenthCGPA"><br>
+    <label for="twelfthCGPA">12th CGPA :</label>
+		<input type="text" id="twelfthCGPA" name="twelfthCGPA"><br>
+    <label for="firstSemCGPA">1st Sem CGPA :</label>
+    <input type="text" id="firstSemCGPA" name="firstSemCGPA"><br>
+    <label for="thirdSemCGPA">3rd Sem CGPA :</label>
+		<input type="text" id="thirdSemCGPA" name="thirdSemCGPA"><br>
+    <label for="fifthSemCGPA">5th Sem CGPA :</label>
+		<input type="text" id="fifthSemCGPA" name="fifthSemCGPA"><br>
+    <label for="seventhSemCGPA">7th Sem CGPA :</label>
+		<input type="text" id="seventhSemCGPA" name="seventhSemCGPA"><br>
+    <label for="isDiploma">Are you a diploma student?</label>
+    <input type="radio" id="isDiploma" name="isDiploma" value="1"><small>Yes</small>
+    <input type="radio" id="isDiploma" name="isDiploma" value="0"><small>No</small><br>
+    <label for="diplomaMarks">Diploma Marks :</label>
+  	<input type="text" id="diplomaMarks" name="diplomaMarks"><br>
+    <label for="activeBacklog">Active Backlogs :</label>
+    <input type="text" id="activeBacklog" name="activeBacklog"><br>
+    <label for="isYD">Do you have any Yeardown?</label>
+    <input type="radio" id="isYD" name="isYD" value="1"><small>Yes</small>
+    <input type="radio" id="isYD" name="isYD" value="0"><small>No</small><br>
+    <label for="YDYears">Yeardown Years :</label>
+    <input type="text" id="YDYears" name="YDYears"><br>
+    </p>
+    </div>
+    <div style="float:left;">
+      <p class="updateform2">
+    <label for="tenthGrade">10th Grade :</label>
+		<input type="text" id="tenthGrade" name="tenthGrade"><br>
+    <label for="twelfthGrade">12th Grade :</label>
+		<input type="text" id="twelfthGrade" name="twelfthGrade"><br>
+    <label for="secondSemCGPA">2nd Sem CGPA :</label>
+		<input type="text" id="secondSemCGPA" name="secondSemCGPA"><br>
+    <label for="fourthSemCGPA">4th Sem CGPA :</label>
+		<input type="text" id="fourthSemCGPA" name="fourthSemCGPA"><br>
+    <label for="sixthSemCGPA">6th Sem CGPA :</label>
+		<input type="text" id="sixthSemCGPA" name="sixthSemCGPA"><br>
+    <label for="eightthSemGCPA">8th Sem CGPA :</label>
+		<input type="text" id="eightthSemGCPA" name="eightthSemGCPA"><br>
+    <label for="isBacklog">Do you have any Backlogs?</label>
+    <input type="radio" id="isBacklog" name="isBacklog" value="1"><small>Yes</small>
+    <input type="radio" id="isBacklog" name="isBacklog" value="0"><small>No</small><br>
+    <label for="numberOfBacklogs">Total Number of Backlogs :</label>
+    <input type="text" id="numberOfBacklogs" name="numberOfBacklogs"><br>
+    <label for="PassiveBacklog">Passive Backlogs :</label>
+    <input type="text" id="PassiveBacklog" name="PassiveBacklog"><br>
+    <label for="isEducationGap">Have you taken any Education Gap?</label>
+    <input type="radio" id="isEducationGap" name="isEducationGap" value="1"><small>Yes</small>
+    <input type="radio" id="isEducationGap" name="isEducationGap" value="0"><small>No</small><br>
+    <label for="educationGapYears">Years of Education Gap :</label>
+    <input type="text" id="educationGapYears" name="educationGapYears"><br>
+    </p>
+    </div>
+<p class="updateform"><center><button name="button" type="submit">Update</button></center></p>
+
+  </form>
+</body>
+</html>
+{% endblock %}

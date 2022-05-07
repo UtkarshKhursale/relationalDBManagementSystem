@@ -1,0 +1,41 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<body>
+  <form class = "updateform" action='round_time_submit/' method= "POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="float:left;">
+    <p class = "updateform">
+    <label for="company">Company:</label>
+    <select name="company" id="company">
+      <option value="">--Select--</option>
+      {% for r in rtable %}
+      <option value="{{r.0}}">{{r.1}}</option>
+      {% endfor %}
+    </select><br>
+    <label for="startTime">Start Time:</label>
+    <input type="datetime-local" id="startTime" name="startTime">
+    </p>
+    </div>
+    <div style="float:left;margin-right:30px;">
+    <p class="updateform2">
+    <label for="round">Round:</label>
+    <select name="round" id="round">
+      <option value="">--Select--</option>
+      <option value="pptTime">Pre-Placement Talk</option>
+      <option value="testTime">Aptitude Test</option>
+      <option value="techIntTime">Technical Interview</option>
+      <option value="HRIntTime">HR Interview</option>
+    </select><br>
+    <label for="endTime">End Time:</label>
+    <input type="datetime-local" id="endTime" name="endTime">
+    </p>
+    </div>
+    <div style = "position:absolute; left:30%; top:45% ">
+    <p class="updateform"><button name="button" type="submit">Update</button></p>
+    </div>
+  </form>
+</body>
+{% endblock %}

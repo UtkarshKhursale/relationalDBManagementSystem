@@ -1,0 +1,11 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<div class= "Resume_head">
+<h2 >{{text}}</h2><br>
+<a class="nohover" href="{{request.META.HTTP_REFERER}}"><button>Update Round</button></a>
+</div>
+</html>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+
+
+<link rel="stylesheet" href="{%static 'pages.css'%}"/>
+<header>
+	<h1>Welcome to Placement Portal</h1>
+	<nav>
+		<a href="">Home</a>
+		<a href="">About</a>
+		<a href="">Gallery</a>
+		<a href="">Contact Us</a>
+	</nav>
+</header>
+{% if user.is_authenticated %}
+{% if user.is_superuser %}
+<div class="sidenav">
+	<a href="{% url 'index' %}">Send Student Data</a>
+	<a href="{% url 'crudpage' %}">CRUD</a>
+	<a href="{% url 'add_company' %}">Add Company</a>
+	<a href="{% url 'shortlist' %}">Update Placement Status</a>
+	<a href="{% url 'round_time' %}">Company Round Timings</a>
+	<a href="{% url 'logout' %}">Log Out</a>
+</div>
+<div class="main">
+
+</div>
+{% else %}
+	<div class="sidenav">
+		<a class="sidebar-header" href="{% url 'profile' %}"><p class="Account">{{ user.first_name }} {{user.last_name}}</p>
+		<p>{{ user.username }}</p></a>
+		<a href="">Dashboard</a>
+		<a href="{% url 'placement_status' %}">Placement Status</a>
+		<a href="{% url 'companies' %}">Companies</a>
+		<a href="{% url 'profile' %}">Update Profile</a>
+		<a href="{% url 'calendar' %}">Calendar</a>
+		<a href="{% url 'resume' %}">Resume</a>
+		<a href="">View Reports</a>
+		<a href="{% url 'logout' %}">Log Out</a>
+	</div>
+{% endif %}
+{% else %}
+	<a class="loginlink" href="{% url 'login' %}">Log In</a>
+	<a class="loginlink" href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+</html>
+{% block content %}
+{% endblock %}

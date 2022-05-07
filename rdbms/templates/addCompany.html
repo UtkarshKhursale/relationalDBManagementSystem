@@ -1,0 +1,31 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<body>
+  <form class = "updateform" action='add_company_submit/' method= "POST">
+    {% csrf_token %}
+    <p class = "updateform"><label for="companyId">Company Id :</label>
+		<input type="text" id="companyId" name="companyId" value="CMP2K22">
+    <label for="companyName">Company Name :</label>
+		<input type="text" id="companyName" name="companyName"><br>
+    <label for="branchCriteria">Branch Criteria :</label>
+    <input type="checkbox" id="branch" name="branch" value="CE"><small>CE</small>
+    <input type="checkbox" id="branch" name="branch" value="IT"><small>IT</small>
+    <input type="checkbox" id="branch" name="branch" value="ENTC"><small>ENTC</small>
+    <label for="cgpaCriteria">CGPA Criteria :</label>
+		<input type="text" id="cgpaCriteria" name="cgpaCriteria"><br>
+    <label for="jobRole">Job Role :</label>
+		<input type="text" id="jobRole" name="jobRole">
+    <label for="package">Package :</label>
+		<input type="text" id="package" name="package"><br>
+    <label for="visitDate">Visit Date :</label>
+		<input type="text" id="visitDate" name="visitDate">
+    <label for="reg_expiry">Registration Deadline :</label>
+		<input type="datetime-local" id="reg_expiry" name="reg_expiry"><br>
+    <center><button class="company" name="button" type="submit">Add Company</button></center>
+  </form>
+</body>
+</html>
+{% endblock %}

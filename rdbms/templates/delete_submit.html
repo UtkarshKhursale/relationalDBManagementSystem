@@ -1,0 +1,30 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+	<head>
+		<title>
+			CRUD operations
+		</title>
+		<link rel="stylesheet" href="{% static 'crudOperations.css' %}"/>
+	</head>
+
+	<body  id='bg' style="background-image:url('{%static 'background1.jpg'%}');">
+		<div style = "position:absolute; left:300px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'create'%}';">CREATE</button>
+		</div>
+		<div style = "position:absolute; left:550px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'read'%}';">READ</button>
+		</div>
+		<div style = "position:absolute; right:550px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'update'%}';">UPDATE</button>
+		</div>
+		<div style = "position:absolute; right:300px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'delete'%}';">DELETE</button>
+		</div>
+		<div style = "position:absolute; left:300px; top:350px;">
+		<strong>Student Information of Regisration Id = {{deleteRegId}} Deleted</strong>
+		</div>
+	</body>
+</html>
+{% endblock %}

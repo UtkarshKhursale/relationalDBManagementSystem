@@ -1,0 +1,33 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<table class="status_table">
+<thead>
+<tr>
+<th> Company Name </th>
+<th> Job Role </th>
+<th> Package </th>
+<th> Visit Date </th>
+<th> Upcoming Event </th>
+<th> Date and Time </th>
+<th> Status </th>
+</tr>
+</thead>
+{% for r in rtable %}
+{% if r.0 != None %}
+<tr>
+  <td>{{r.1}}</td>
+  <td>{{r.4}}</td>
+  <td>{{r.5}} LPA</td>
+  <td>{{r.6}}</td>
+  <td>{{r.13}}</td>
+  <td>{{r.14}}</td>
+  <td class = 'status_text'>{{r.15}}</td>
+</tr>
+{% endif %}
+{% endfor %}
+</table>
+</html>
+{% endblock %}

@@ -1,0 +1,175 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}"/>
+    <script src="{% static 'index.js' %}"></script>
+</head>
+<body>
+<div class="header">
+
+</div>
+    <form action="" class="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <div class="upload_section">
+        <label for="company">Company: </label>
+        <select name="company" id="company">
+          <option value="">--Select--</option>
+          {% for r in rtable %}
+          <option value="{{r.0}}">{{r.1}}</option>
+          {% endfor %}
+          </select>
+      </div>
+
+      <br>
+
+    <div class="grid">
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="fathersName" id="fathersName">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Father's Name</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="mothersName" id="mothersName">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Mother's Name</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="email" id="email">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Email</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="aadhar" id="aadhar">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Aadhar Number</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="PAN" id="PAN">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">PAN Number</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="passport" id="passport">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Passport Number</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="mobileNumber" id="mobileNumber">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Mobile Number</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="permanantAddress" id="permanantAddress">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Permanant Address</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="tenthCGPA" id="tenthCGPA">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Marks</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="numberOfBacklogs" id="numberOfBacklogs">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Number Of Backlogs</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="activeBacklog" id="activeBacklog">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Active Backlog</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="PassiveBacklog" id="PassiveBacklog">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Passive Backlog</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="YDYears" id="YDYears">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">YD Years</div>
+        </div>
+        <div class="checkbox_area">
+            <label class="checkbox path">
+                <input type="checkbox" name="inputFields" value="currentBatch" id="currentBatch">
+                <svg viewBox="0 0 21 21">
+                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                </svg>
+            </label>
+            <div class="text">Current Batch</div>
+        </div>
+        <input class="email_section" type="text" name="email" placeholder="Enter Company Email Address">
+        <br>
+        <div class="wrapper">
+              <button class="submit_btn" type="submit" name="submit">Send Student Data</button>
+          </div>
+    </div>
+    <!--FONT AWESOME-->
+
+
+
+<!--FOOTER-->
+
+</form>
+</body>
+</html>
+{% endblock %}

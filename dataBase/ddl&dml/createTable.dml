@@ -1,0 +1,57 @@
+-- RELATIONAL DATABASE MANAGEMENT SYSTEM (RDMS)
+CREATE DATABASE IF NOT EXISTS  RDMS;
+
+-- USE DATABASE
+USE RDMS;
+
+-- CREATE TABLE
+CREATE TABLE IF NOT EXISTS studentDetails (
+registrationId	varchar(11) not null unique,
+rollNumber	int	not null unique,
+firstName varchar(100),
+surName varchar(100),
+email nvarchar(320) not null unique,
+mobileNumber varchar(100) not null unique,
+aadhar varchar(100) not null unique,
+PAN	varchar(100) unique,
+passport varchar(100) unique,
+nationality varchar(20),
+isAadhar boolean,
+isPAN boolean,
+isPassport boolean,
+isIndian boolean,
+fathersName varchar(300),
+mothersName varchar(300),
+permanantAddress varchar(500),
+residentialAddress varchar(500),
+tenthCGPA float,
+twelfthCGPA float,
+tenthGrade float,
+twelfthGrade float,
+firstSemCGPA float,
+secondSemCGPA float,
+thirdSemCGPA float,
+fourthSemCGPA float,
+fifthSemCGPA float,
+sixthSemCGPA float,
+seventhSemCGPA float,
+eightthSemGCPA float,
+isDiploma boolean,
+diplomaMarks float,
+isBacklog boolean,
+numberOfBacklogs int,
+activeBacklog int,
+PassiveBacklog int,
+isYD boolean,
+YDYears int,
+isEducationGap boolean,
+educationGapYears int,
+isPICTStudent boolean,
+currentBatch int
+);
+
+-- drop table studentDetails;
+
+-- GET ALL COLOUMN NAMES
+-- SELECT column_name FROM INFORMATION_SCHEMA.COLUMNS
+-- WHERE TABLE_NAME = 'StudentDetails';

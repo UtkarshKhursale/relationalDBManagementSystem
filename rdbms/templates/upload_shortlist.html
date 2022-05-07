@@ -1,0 +1,38 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<body>
+  <form class = "updateform" action='shortlist_submit/' method= "POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="float:left;">
+    <p class = "updateform">
+    <label for="company">Company:</label>
+    <select name="company" id="company">
+      <option value="">--Select--</option>
+      {% for r in rtable %}
+      <option value="{{r.0}}">{{r.1}}</option>
+      {% endfor %}
+    </select>
+    </p>
+    </div>
+    <div style="float:left;margin-right:30px;">
+    <p class="updateform2">
+    <label for="listtype">List Type:</label>
+    <select name="listtype" id="listtype">
+      <option value="">--Select--</option>
+      <option value="isSelected">Selection Shortlist</option>
+      <option value="isPlaced">Final Placed List</option>
+    </select>
+    </p>
+    </div>
+    <div class = "upload_list">
+    <label for="studentInfo">Upload List: </label>
+    <input type="file" id="studentInfo" name="studentInfo" value="studentInfo"><br><br><br>
+    <button class="upload" name="button" type="submit">Upload</button>
+    </div>
+  </form>
+</body>
+</html>
+{% endblock %}

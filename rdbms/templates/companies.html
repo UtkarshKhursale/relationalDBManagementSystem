@@ -1,0 +1,26 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<div class = "grid-container">
+  {% for r in rtable %}
+  <div class = "grid-item">
+    <h2>{{r.1}}</h2>
+    <h4>{{r.4}}</h4><br>
+    <h3>Package: {{r.5}} LPA</h3><br>
+    Visit Date: {{r.6}}<br>
+    Deadline: {{r.7}}
+    <form action = '' method= "POST">
+    {% csrf_token %}
+    {% if r.9 %}
+    <button class="applybutton" name="button" type="submit" value = "{{r.0}}">Apply</button>
+    {% else %}
+    <button class="appliedbutton" name="button" type="submit" value = "{{r.0}}" disabled>Applied</button>
+    {% endif %}
+    </form>
+  </div>
+  {% endfor %}
+</div>
+</html>
+{% endblock %}

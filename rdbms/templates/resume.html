@@ -1,0 +1,14 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<form action='resume_view/' method= "POST" enctype="multipart/form-data">
+{% csrf_token %}
+<label for="Resume">Upload Resume: </label>
+<input type="file" name="Resume" class="Resume" value="Resume"><br>
+<button class="resume" name="button" type="submit" value = "submit">UPLOAD</button><br><br>
+</form>
+<a class="nohover" href="{% url 'resume_view_pdf' %}"><button class="resume">VIEW</button></a>
+</html>
+{% endblock %}

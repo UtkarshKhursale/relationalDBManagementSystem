@@ -1,0 +1,35 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+	<head>
+		<title>
+			CRUD operations
+		</title>
+		<link rel="stylesheet" href="{% static 'crudOperations.css' %}"/>
+	</head>
+
+	<body id='bg' style="background-image:url('{%static 'background1.jpg'%}');">
+		<div style = "position:absolute; left:400px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'create'%}';">CREATE</button>
+		</div>
+		<div style = "position:absolute; left:650px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'read'%}';">READ</button>
+		</div>
+		<div style = "position:absolute; right:450px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'update'%}';">UPDATE</button>
+		</div>
+		<div style = "position:absolute; right:200px; top:200px;">
+		<button name="button" type="submit" onclick="window.location.href = '{%url 'delete'%}';">DELETE</button>
+		</div>
+    <div style = "position:absolute; left:500px; top:400px;">
+    <form action='create_submit/' method= "POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<label for="studentInfo">Upload CSV file: </label>
+    <input type="file" name="studentInfo" value="studentInfo"><br>
+    <button class="submit" name="button" type="submit" value = "submit">SUBMIT</button>
+		</form>
+    </div>
+	</body>
+</html>
+{% endblock %}
