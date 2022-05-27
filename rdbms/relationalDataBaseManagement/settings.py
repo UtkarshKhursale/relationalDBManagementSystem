@@ -1,4 +1,4 @@
-<<<<<<< current
+#<<<<<<< current
 """
 Django settings for relationalDataBaseManagement project.
 
@@ -147,7 +147,7 @@ AUTH_USER_MODEL = 'authen.CustomUser'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-=======
+#=======
 """
 Django settings for relationalDataBaseManagement project.
 
@@ -297,4 +297,4 @@ AUTH_USER_MODEL = 'authen.CustomUser'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
->>>>>>> before discard
+#>>>>>>> before discard

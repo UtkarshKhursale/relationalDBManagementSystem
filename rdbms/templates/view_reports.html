@@ -1,0 +1,70 @@
+{% extends 'auth/home.html' %}
+{% block content %}
+{% load static %}
+<html>
+<link rel="stylesheet" href="{%static 'student.css'%}"/>
+<div class = "grid-container2">
+<div id="my-pie-chart-container">
+  <div id="my-pie-chart1"></div>
+
+  <div id="legenda">
+    <div class="entry">
+      <div id="color-orange" class="entry-color">52</div>
+      <div class="entry-text">Placed Male </div>
+    </div>
+    <div class="entry">
+      <div id="color-blue" class="entry-color">64</div>
+      <div class="entry-text">Placed Female </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="my-pie-chart-container">
+    <div id="my-pie-chart2"></div>
+
+    <div id="legenda">
+      <div class="entry">
+        <div id="color-pink" class="entry-color">46</div>
+        <div class="entry-text">CE Placed </div>
+      </div>
+      <div class="entry">
+        <div id="color-blue" class="entry-color">33</div>
+        <div class="entry-text">IT Placed </div>
+      </div>
+      <div class="entry">
+        <div id="color-yellow" class="entry-color">30</div>
+        <div class="entry-text">E&TC Placed </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="my-pie-chart-container">
+      <div id="my-pie-chart3"></div>
+
+      <div id="legenda">
+        <div class="entry">
+          <div id="color-green" class="entry-color">116</div>
+          <div class="entry-text">Placed </div>
+        </div>
+        <div class="entry">
+          <div id="color-red" class="entry-color">25</div>
+          <div class="entry-text">Not Placed </div>
+        </div>
+        </div>
+      </div>
+</div>
+
+<div >
+    <div class="lable"><span></span> <strong>No of Placed Students<strong></div>
+        <div class="chart">
+
+            <div class="bar-1"><span>78</span><label>2019</label></div>
+            <div class="bar-2"><span>92</span><label>2020</label></div>
+            <div class="bar-3"><span>116</span><label>2021</label></div>
+
+        </div>
+        <hr class="new1">
+
+     </div>
+</html>
+{% endblock %}

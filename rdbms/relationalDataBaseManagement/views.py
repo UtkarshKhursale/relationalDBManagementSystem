@@ -32,6 +32,13 @@ from django.contrib.auth.models import User
 def sent(request):
     return(render(request, "sent.html", {"text":"home"}))
 
+
+def aboutus(request):
+    return render(request,'aboutus.html',)
+
+def contactus(request):
+    return render(request,'contactus.html',)
+
 @user_passes_test(lambda u: u.is_superuser)
 @login_required
 def index(request):
@@ -294,3 +301,7 @@ def resume_view_pdf(request):
     filename = RegId +"_resume.pdf"
     filepath = os.path.join(RESUME_ROOT, filename)
     return FileResponse(open(filepath, 'rb'), content_type='application/pdf')
+
+@login_required
+def view_reports(request):
+    return render(request,'view_reports.html',)

@@ -168,6 +168,19 @@ a.nohover:hover{
 
 }
 
+.grid-container2 {
+  width: 1130px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-left:360px;
+  margin-bottom: 220px;
+  margin-top: 100px;
+
+}
+
 .grid-item {
   background-color: #fff;
   border-radius: 3px;
@@ -177,6 +190,153 @@ a.nohover:hover{
   padding: 20px;
 }
 
+#my-pie-chart1 {
+  background: conic-gradient(orange 42%, blue 42%);
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#my-pie-chart2 {
+  background: conic-gradient(pink 42%, blue 42% 72%, yellow 72%);
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#my-pie-chart3 {
+  background: conic-gradient(#aaff00 80%, red 80%);
+  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#legenda {
+  margin-top: 20px;
+  background-color: white;
+  padding: 5px;
+  width:150px;
+}
+
+.entry {
+  display: flex;
+}
+
+.entry-color {
+    height: 25px;
+    width: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.entry-text {
+  margin-left: 5px;
+}
+
+#color-red {
+  background-color: red;
+}
+
+#color-orange {
+  background-color: orange;
+}
+
+#color-yellow {
+  background-color: yellow;
+}
+
+#color-green {
+  background-color: #aaff00;
+}
+
+#color-blue {
+  background-color: blue;
+}
+
+#color-pink {
+  background-color: pink;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+  grid-column-gap: 45px;
+  grid-row-gap: 3px;
+  height: 300px;
+  width: 500px;
+  padding: 45px 10px 0px 10px;
+  margin-left: 200px;
+
+}
+
+[class*="bar"] {
+  border-radius: 0;
+  transition: all .6s ease;
+  background-color: #ffb703;
+  border-top:2px solid #fff;
+  border-right:2px solid #fff;
+  border-left:2px solid #fff;
+  grid-row-start: 1;
+  box-sizing: border-box;
+  grid-row-end: 101;
+  text-align: center;
+  margin-right: 50px;
+  margin-top: auto;
+  }
+[class*="bar"] span{
+  position: relative;
+  top: -20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+[class*="bar"] label{
+  position: absolute;
+  width: auto;
+  bottom: -23px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: auto;
+
+  left: 0;
+  right: 0;
+}
+
+.lable{
+  color: #fff;
+  text-align: center;
+  margin-left: 200px;
+}
+.lable span{
+  background-color: #ffb703;
+  border:2px solid #fff;
+  padding: 0px 20px;
+  margin-right: 10px;
+}
+.bar-1{
+  position: relative;
+  height:50%;
+}
+
+.bar-2{
+  position: relative;
+  height:75%;
+}
+
+.bar-3{
+  position: relative;
+  height:100%;
+}
+
+hr.new1 {
+  border-top: 5px solid white;
+  margin-left: 180px;
+  margin-bottom: 160px;
+}
 
 img {
   float: right;

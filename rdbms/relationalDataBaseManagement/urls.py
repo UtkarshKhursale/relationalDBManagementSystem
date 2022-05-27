@@ -28,6 +28,8 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('signup/', app_views.signup, name='signup'),
     path('admin/', admin.site.urls),
+    path('aboutus/', views.aboutus, name="aboutus"),
+    path('contactus/', views.contactus, name="contactus"),
     path('index/', views.index, name="index"),
     path('sent', views.sent),
     path('crudpage/',views.crud, name="crudpage"),
@@ -54,4 +56,5 @@ urlpatterns = [
     path('resume/resume_view/', views.resume_view, name="resume_view"),
     path('resume_view_pdf/', views.resume_view_pdf, name="resume_view_pdf"),
     path('calendar/', views.calendar, name="calendar"),
+    path('view_reports/', views.view_reports, name="view_reports"),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

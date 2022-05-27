@@ -6,10 +6,10 @@
 <header>
 	<h1>Welcome to Placement Portal</h1>
 	<nav>
-		<a href="">Home</a>
-		<a href="">About</a>
+		<a href="{% url 'home' %}">Home</a>
+		<a href="{% url 'aboutus' %}">About Us</a>
 		<a href="">Gallery</a>
-		<a href="">Contact Us</a>
+		<a href="{% url 'contactus' %}">Contact Us</a>
 	</nav>
 </header>
 {% if user.is_authenticated %}
@@ -27,15 +27,14 @@
 </div>
 {% else %}
 	<div class="sidenav">
-		<a class="sidebar-header" href="{% url 'profile' %}"><p class="Account">{{ user.first_name }} {{user.last_name}}</p>
+		<a class="sidenav-header" href="{% url 'profile' %}"><p class="Account">{{ user.first_name }} {{user.last_name}}</p>
 		<p>{{ user.username }}</p></a>
-		<a href="">Dashboard</a>
 		<a href="{% url 'placement_status' %}">Placement Status</a>
 		<a href="{% url 'companies' %}">Companies</a>
 		<a href="{% url 'profile' %}">Update Profile</a>
 		<a href="{% url 'calendar' %}">Calendar</a>
 		<a href="{% url 'resume' %}">Resume</a>
-		<a href="">View Reports</a>
+		<a href="{% url 'view_reports' %}">View Reports</a>
 		<a href="{% url 'logout' %}">Log Out</a>
 	</div>
 {% endif %}

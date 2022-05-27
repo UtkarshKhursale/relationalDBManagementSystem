@@ -137,6 +137,17 @@ flex: 1;
     border-radius: 5px;
 }
 
+textarea{
+  flex: 1;
+      padding: 15px 10px;
+      color: $gray;
+      font-size: 1rem;
+      width: 375px;
+      border: none;
+      background-color: #d3d3d3;
+      border-radius: 5px;
+}
+
 
 p {
   margin-bottom: 25px;
@@ -210,17 +221,17 @@ h2 {
     border-color: #fff;
 }
 
-.sidebar-header {
+.sidenav-header {
   padding: 0.25px;
   margin: 0;
   background : linear-gradient(to bottom, #fff 0%, #fafad2 100%);
 }
 
-.sidebar-header a:hover {
+.sidenav-header a:hover {
   background : #ffe4b5;
 }
 
-.sidebar-header a:active {
+.sidenav-header a:active {
   background : #ffe4b5;
 }
 
@@ -281,4 +292,18 @@ button:active {
   button {
     min-width: 170px;
   }
+}
+
+
+#about{
+  font-size: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
+  color: #ffb703;
+}
+
+
+.form-control{
+margin-bottom: 40px;
 }

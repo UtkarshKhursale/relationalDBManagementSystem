@@ -42,7 +42,7 @@ def getStudentDetailsCSV(coloumnsRequestedFromWeb, companyId):
 
     # Get the List of Interested Students from CSV provided as INPUT
     interestedStudents = setInterestedStudentsFromCSV(companyId)
-    print(interestedStudents)
+    #print(interestedStudents)
     # Store a Query to be Executed to fetch the Coloumns from DB for Interested Students
     executeSQ = SELECT_QUERY.format(reqColStr,TABLE_NAME,interestedStudents)
     resoverall = executeGetCommand(executeSQ)
