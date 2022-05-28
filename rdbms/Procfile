@@ -1,1 +1,1 @@
-eb: gunicorn relationalDataBaseManagement.wsgi
+web: gunicorn relationalDataBaseManagement.wsgi
