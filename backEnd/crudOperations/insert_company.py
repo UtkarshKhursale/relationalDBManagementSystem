@@ -38,7 +38,7 @@ def update_timings(companyId, startColName, roundStartTime, roundEndTime):
     service = build("calendar", "v3", credentials = credentials)
     calendar_id = '15b6dnggoq9mgbfibm6so5bnkg@group.calendar.google.com'
     event = {
-    'summary': eventName,
+    'summary': company +" " + eventName,
     'location': 'IT Seminar Hall',
     'description': company,
     'start': {
@@ -50,7 +50,7 @@ def update_timings(companyId, startColName, roundStartTime, roundEndTime):
         'timeZone': 'Asia/Kolkata',
         },
     'attendees': [
-        {'email': 'milindkhursale@gmail.com'},
+        {'email': 'varadd15032000@gmail.com'},
         ],
     'reminders': {
         'useDefault': False,
